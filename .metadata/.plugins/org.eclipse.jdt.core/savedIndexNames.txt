@@ -1,0 +1,14 @@
+INDEX VERSION 1.127+G:\FAESA\2014-2\Estrutura de Dados\workspaces\EstruturasDeDados\.metadata\.plugins\org.eclipse.jdt.core
+1065832147.index
+2193799835.index
+3991718231.index
+1877021558.index
+3454125809.index
+834584462.index
+1947431546.index
+3598813974.index
+2338776811.index
+2743915309.index
+2419172111.index
+1574318262.index
+1028199574.index

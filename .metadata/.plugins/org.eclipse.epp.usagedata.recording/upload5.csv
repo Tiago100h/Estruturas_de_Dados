@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.version,sysinfo,,,"1.7.0_07",1410383635352
+java.vm.info,sysinfo,,,"mixed mode, sharing",1410383635352
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1410383635352
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1410383635352
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1410383635352
+java.vm.specification.version,sysinfo,,,"1.7",1410383635352
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1410383635352
+java.vm.version,sysinfo,,,"23.3-b01",1410383635352
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1410383635384
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1410383635399
+started,bundle,org.eclipse.update.core,3.2.300.v20090525,"org.eclipse.update.core",1410383635555
+started,bundle,org.eclipse.wst.ws.service.policy.ui,1.0.102.v200903070248,"org.eclipse.wst.ws.service.policy.ui",1410383635851
+started,bundle,org.eclipse.jst.servlet.ui,1.1.301.v200908101600,"org.eclipse.jst.servlet.ui",1410383638327
+started,bundle,org.eclipse.mylyn.monitor.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.monitor.ui",1410383643467
+started,bundle,org.eclipse.ltk.ui.refactoring,3.4.100.v20090604,"org.eclipse.ltk.ui.refactoring",1410383674915
+started,bundle,org.eclipse.compare.core,3.5.0.I20090430-0408,"org.eclipse.compare.core",1410383676582
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1410383678934
+started,bundle,org.eclipse.core.variables,3.2.200.v20090521,"org.eclipse.core.variables",1410383680429
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1410383682096
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1410383682376
+started,bundle,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit",1410383683871
+started,bundle,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.ui.views.log",1410383684542
+started,bundle,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui",1410383684931
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1410383693055
+started,bundle,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui",1410383730583

@@ -1,0 +1,333 @@
+package simplismente;
+import dados.Item;
+public class ListaSimples {
+	private No prim;
+	private No ult;
+	private int quantNos;
+
+	public ListaSimples(){
+		this.prim = null;
+		this.ult = null;
+		this.quantNos = 0;
+	}
+	public int getQuantNos(){
+		return this.quantNos;
+	}
+	public No getPrim(){
+		return this.prim;
+	}
+	public No getUlt(){
+		return this.ult;
+	}
+	public boolean ÈVazia (){
+		return (this.prim == null);
+	}
+	public void inserirPrimeiro(Item elem){
+		No novoNo = new No (elem);
+		if (this.ÈVazia()){
+			this.ult = novoNo;
+		}
+		novoNo.setProx(this.prim);
+		this.prim = novoNo;
+		this.quantNos++;
+	}
+	public void inserirUltimo (Item elem){
+		No novoNo = new No (elem);
+		if (this.ÈVazia()){
+			this.prim = novoNo;
+		} else {
+			this.ult.setProx(novoNo);
+		}
+		this.ult = novoNo;
+		this.quantNos++;
+	}
+	public No pesquisarNo (int chave){
+		No atual = this.prim;
+		while ((atual != null) && (atual.getInfo().getChave() != chave)){
+			atual = atual.getProx();
+		}	
+		return atual;
+	}
+	public boolean removerNo (int chave) {
+		No atual = this.prim;
+		No ant = null;
+		if (ÈVazia()){
+			return false;
+		} else {
+			while ((atual != null)&&(atual.getInfo().getChave()!= chave)){
+				ant = atual;
+				atual = atual.getProx();
+			}
+			if (atual == null){
+				return false;
+			}
+			else{
+				if (atual == this.prim){
+					if (this.prim == this.ult){
+						this.ult = null;
+					}
+					this.prim = this.prim.getProx();
+				} else {
+					if (atual == this.ult){
+						this.ult = ant;
+					}
+					ant.setProx(atual.getProx());
+				}
+				this.quantNos--;
+				return true;
+			}
+		}
+	}
+	public String toString(){
+		String msg = "";
+		No atual = this.prim;
+		while (atual != null){
+			msg += atual.getInfo().getChave()+"\n";
+			atual = atual.getProx();
+		}
+		return msg;
+	}	
+	public boolean estaNaLista (int ch){
+		if (!this.ÈVazia()){
+			No atual = this.prim;
+			while (atual.getInfo().getChave() < ch && atual.getProx() != null){
+				atual = atual.getProx();
+			}
+			if (ch == atual.getInfo().getChave()){
+				return true;
+			} else{
+				return false;
+			}
+		} else{
+			return false;
+		}
+
+	}
+
+
+	// Meus MÈtodos
+	public void meuInserirPrimeiro(Item elem){
+		No novoNo = new No(elem);
+		if (ÈVazia()){
+			this.ult = novoNo;			
+		} 
+		novoNo.setProx(this.prim);				
+		this.prim = novoNo;
+		this.quantNos++;
+	}
+	public void meuInserirUltimo(Item elem){
+		No novoNo = new No(elem);
+		if (ÈVazia()){
+			this.prim = novoNo;
+		} else {
+			this.ult.setProx(novoNo);
+		}		
+		this.ult = novoNo;
+		this.quantNos++;
+	}	
+
+	// ExercÌcios
+	// ExercÌcio 1
+	public boolean meuEstaNaLista (int ch){
+		if (this.ÈVazia()){
+			return false;
+		} else{
+			No atual = this.prim;
+			while (ch > atual.getInfo().getChave() && atual.getProx() != null){
+				atual = atual.getProx();
+			}
+			if (atual.getInfo().getChave() == ch){
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
+	// ExercÌcio 3 Letra A
+	public No meuPesquisarNo (int chave){
+		No atual = this.prim;
+		while (chave != atual.getInfo().getChave() && atual.getProx() != null){
+			atual = atual.getProx();
+		}
+		return atual;
+	}
+	// ExercÌcio 3 Letra B
+	public void concatenarListas (ListaSimples lista2){
+		if (!lista2.ÈVazia()){
+			if (this.ÈVazia()){
+				this.prim = lista2.prim;				
+			} else {
+				this.ult.setProx(lista2.prim);
+			}
+			this.ult = lista2.ult;
+			this.quantNos += lista2.quantNos;
+			lista2.prim = null;
+			lista2.ult = null;
+			lista2.quantNos = 0;
+		}
+	}
+	// ExercÌcio 3 Letra C
+	public ListaSimples dividirLista (){
+		if (this.quantNos < 2){
+			return null;
+		} else {
+			ListaSimples nova = new ListaSimples();
+			int cont = this.quantNos/2;
+			No atual = this.prim;
+			for (int i = 1; i < cont; i++){
+				atual = atual.getProx();
+			}
+			nova.prim = atual.getProx();
+			nova.ult = this.ult;
+			this.ult = atual;
+			this.ult.setProx(null);
+			nova.quantNos = this.quantNos - (cont);
+			this.quantNos = cont;
+			return nova;
+		}
+	}
+	
+	// ExercÌcio 4
+	public void trocarElementoMporN (int m, int n){
+		if (!this.ÈVazia()){
+			No aux = this.prim;
+			int cont = 0;
+			No aux2 = this.prim;
+			while (aux!= null && aux.getInfo().getChave() <= m){				
+				if (aux.getInfo().getChave() == m){
+					if (aux == this.prim){
+						this.prim.getInfo().setChave(n);
+					} else {
+						aux2.getProx().getInfo().setChave(n);
+					}
+				}
+				if (cont > 0){
+					aux2 = aux2.getProx();
+				}
+				aux = aux.getProx();
+				cont++;
+			}
+		}
+	}
+	
+	// ExercÌcio 5
+	public void inssub (int i1, int i2, int len, ListaSimples l2){
+		if ((i1 > this.quantNos + 1) || (i2 + len - 1 > l2.quantNos) || (i1 < 1) || (i2 < 1)){
+			System.out.println("erro");
+		} else {
+			int cont1 = 1;
+			No aux1 = this.prim;
+			while (cont1 < i1 - 1){
+				aux1 = aux1.getProx();
+				cont1++;
+			}
+			int cont2 = 1;
+			No aux2 = l2.prim;
+			while (cont2 != i2){
+				aux2 = aux2.getProx();
+				cont2++;
+			}
+			No auxLen = aux2;
+			for (int j = 1; j <= len - 2; j++){
+				auxLen = auxLen.getProx();
+			}
+			if (len == 1){
+				aux2.setProx(aux1.getProx().getProx());
+			} else {
+				if (len == 2){
+					aux2.getProx().setProx(aux1.getProx().getProx());
+				} else {
+					if (i1 == 1){
+						auxLen.getProx().setProx(aux1.getProx());
+					} else {
+						auxLen.getProx().setProx(aux1.getProx().getProx());
+					}
+				}	
+			}
+			if (i1 == 1){
+				this.prim.setProx(aux2);				
+			} else {
+				aux1.getProx().setProx(aux2);
+			}
+			if (i1 == this.quantNos){
+				this.ult = l2.ult;
+			}
+			this.quantNos += len;
+		}
+	}
+	
+	// ExercÌcio 6
+	public No search (No l, int x){
+		l = this.prim;
+		while (l != null && l.getInfo().getChave() != x){
+			l = l.getProx();
+		}
+		return l;		
+	}
+	public No searchInsert (No l, int x){
+		l = this.prim;
+		while (l.getInfo().getChave() != x){
+			l = l.getProx();
+			if (l.getProx() == null){
+				l.getInfo().setChave(x);
+			}
+		}
+		return l;
+	}
+		
+	// ExercÌcio 7
+	public void moverMenor (){
+		if (!this.ÈVazia()){
+			No aux = this.prim;
+			int menor = aux.getInfo().getChave();
+			No aux2 = this.prim;
+			No aux3 = this.prim;
+			int cont = 0;
+			for(; aux.getProx() != null;aux = aux.getProx()){
+				if (aux.getProx().getInfo().getChave() < menor){
+					menor = aux.getProx().getInfo().getChave();
+					aux2 = aux;
+				}				
+				if (cont > 1){
+					aux3 = aux3.getProx();
+				}
+				cont++;
+			}
+			if (menor != this.prim.getInfo().getChave()){				
+					if (menor == this.ult.getInfo().getChave()){
+						aux2.getProx().setProx(this.prim.getProx());
+						aux3.getProx().setProx(this.prim);
+						this.prim.setProx(null);
+						this.ult = this.prim;
+					} else {
+						aux2.getProx().setProx(this.prim);
+						this.prim.setProx(aux2.getProx().getProx());
+					}				
+				this.prim = aux2.getProx();
+			}
+		}
+	}
+
+	// ExercÌcio 8
+	public boolean saoIguais (ListaSimples lista2){
+		boolean iguais = false;
+		if (this.quantNos != lista2.quantNos){
+			return iguais;
+		}
+		No aux1 = this.prim;
+		No aux2 = lista2.prim;
+		while (aux1 != null || aux2 != null){
+			if(aux1.getInfo().getChave() != aux2.getInfo().getChave()){
+				iguais = false;
+			} else {
+				iguais = true;
+			}
+			aux1 = aux1.getProx();
+			aux2 = aux2.getProx();
+		}
+		return iguais;
+	}
+
+}
+

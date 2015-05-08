@@ -1,0 +1,44 @@
+package simplismente;
+
+import dados.*;
+
+public class BlocoPrincipal {
+
+	public static void main(String[] args) {
+		
+		
+		ListaSimples lista1 = new ListaSimples();
+		lista1.inserirUltimo(new Item(4));
+		lista1.inserirUltimo(new Item(2));
+		lista1.inserirUltimo(new Item(3));
+		lista1.inserirUltimo(new Item(1));
+		
+		System.out.println(lista1.toString());
+		lista1.moverMenor();
+		
+		System.out.println(lista1.toString());
+
+
+				
+		
+
+		
+		
+		
+		
+		//ListaFilme
+		/* 
+		ListaSimplesFilme listaFilme = new ListaSimplesFilme();
+		listaFilme.inserirFilme(new Filme(1, "Assassino", "16", "Terror"));
+		listaFilme.inserirFilme(new Filme(1, "Assassino2", "16", "Terror"));
+		listaFilme.inserirFilme(new Filme(1, "Assassino3", "16", "Terror"));
+		listaFilme.inserirFilme(new Filme(1, "Engraçado", "14", "Comédia"));
+		listaFilme.inserirFilme(new Filme(1, "Engraçado2", "14", "Comédia"));
+		System.out.println(listaFilme.listarFilmesGenero("Comédia"));
+		*/
+
+		
+		}
+}
+
+

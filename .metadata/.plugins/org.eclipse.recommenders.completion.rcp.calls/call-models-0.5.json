@@ -1,0 +1,17 @@
+{
+  "C:\\Program Files\\Java\\jre7\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "H:\\FAESA\\2014-2\\Estrutura de Dados\\workspace\\EstruturasDados\\src": {
+    "location": "H:\\FAESA\\2014-2\\Estrutura de Dados\\workspace\\EstruturasDados\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027H:\\FAESA\\2014-2\\Estrutura de Dados\\workspace\\EstruturasDados\\src\u0027. Skipped."
+  },
+  "C:\\Users\\tiago.giuliatte\\Downloads\\workspace\\EstruturasDados\\src": {
+    "location": "C:\\Users\\tiago.giuliatte\\Downloads\\workspace\\EstruturasDados\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\tiago.giuliatte\\Downloads\\workspace\\EstruturasDados\\src\u0027. Skipped."
+  }
+}

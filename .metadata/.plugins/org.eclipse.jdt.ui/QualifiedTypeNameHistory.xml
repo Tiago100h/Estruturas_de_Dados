@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="simplismente.ListaSimplesFilme"/>
+<fullyQualifiedTypeName name="dados.Filme"/>
+<fullyQualifiedTypeName name="simplismente.NoFilme"/>
+<fullyQualifiedTypeName name="javax.lang.model.type.PrimitiveType"/>
+<fullyQualifiedTypeName name="dados.Alunos"/>
+<fullyQualifiedTypeName name="dados.Aluno"/>
+<fullyQualifiedTypeName name="contiguidade.ListaContiguaAlnunos"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="simplismente.No"/>
+<fullyQualifiedTypeName name="simplismente.ListaSimplesAtleta"/>
+<fullyQualifiedTypeName name="simplismente.NoAtleta"/>
+<fullyQualifiedTypeName name="duplamente.NoDuplaAtleta"/>
+<fullyQualifiedTypeName name="duplamente.ListaDuplaCaractere"/>
+<fullyQualifiedTypeName name="duplamente.NoDuplaCaractere"/>
+<fullyQualifiedTypeName name="dados.Caractere"/>
+<fullyQualifiedTypeName name="pilha.PilhaContiguaCaractere"/>
+<fullyQualifiedTypeName name="contiguidade.ListaContigua"/>
+<fullyQualifiedTypeName name="duplamente.NoDupla"/>
+<fullyQualifiedTypeName name="duplamente.ListaDupla"/>
+<fullyQualifiedTypeName name="duplamente.ListaDuplaAtletas"/>
+<fullyQualifiedTypeName name="filaCircular.FilaCircular"/>
+<fullyQualifiedTypeName name="pilha.PilhaContigua"/>
+<fullyQualifiedTypeName name="dados.Item"/>
+<fullyQualifiedTypeName name="arvores.Arvore"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="arvores.NoArv"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="dados.Cantor"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="io.InOut"/>
+<fullyQualifiedTypeName name="dados.Atleta"/>
+<fullyQualifiedTypeName name="contiguidade.ListaContiguaNome"/>
+<fullyQualifiedTypeName name="dados.ItemNome"/>
+<fullyQualifiedTypeName name="simplismente.ListaSimples"/>
+</qualifiedTypeNameHistroy>
